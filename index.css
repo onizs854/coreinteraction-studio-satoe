@@ -1,0 +1,50 @@
+@font-face {
+  font-family: BluuNext-Bold; src: url('fonts/BluuNext-Bold.otf');
+  font-family: Poppins; src: url('fonts/Poppins-Medium.otf');
+}
+
+body {
+	margin: auto;
+	top: 0;	left: 0; right: 0; bottom: 0;
+	position: absolute;
+	width: 50%;
+	height: 50%;
+	overflow: auto;
+}
+
+h1 {
+	font-family: Poppins;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 8px;
+	text-align: center;
+}
+
+h2 {
+	font-family: Poppins;
+	font-size: 20px;
+	letter-spacing: 1px;
+	text-align: center;
+	margin-top: -10px;
+}
+
+.projects {
+	font-family: Poppins;
+	text-transform: uppercase;
+	font-size: 30px;`
+	letter-spacing: 10px;
+	text-align: center;
+	margin: auto;
+	margin-top: 70px;
+}
+
+#project1, #project2 {
+	width: 50%;
+	height: 45px;
+	border: solid;
+	border-color: pink;
+	border-width: 10px;
+	margin-top: 100px;
+	position: relative;
+	margin: auto;
+}

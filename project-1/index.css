@@ -1,0 +1,25 @@
+@font-face {
+  font-family: BluuNext-Bold; src: url('../fonts/BluuNext-Bold.otf');
+  font-family: Poppins; src: url('../fonts/Poppins-Medium.otf');
+}
+
+body {
+	margin: auto;
+	top: 0;	left: 0; right: 0; bottom: 0;
+	position: absolute;
+	width: 50%;
+	height: 50%;
+	overflow: auto;
+	background: pink;
+}
+
+.links {
+	font-family: Poppins;
+	text-transform: uppercase;
+	font-size: 30px;`
+	letter-spacing: 10px;
+	text-align: center;
+	margin: auto;
+	margin-top: 70px;
+	color: white;
+}
