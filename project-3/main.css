@@ -23,7 +23,7 @@ body {
   background-color: #91ECF2;
 }
 .park {
-  background-color: #A0F291;
+  background-color: #a9d48a;
 }
 .shop {
   background-color: #FF5E5E;
@@ -32,7 +32,7 @@ body {
   background-color: #87F5E1;
 }
 .homework {
-  background-color: #e9c1fd;
+  background-color: #dcc1dd;
 }
 .food {
   background-color: #98A8D4;
@@ -60,6 +60,7 @@ body {
 
 .username-form {
   position: fixed;
+  z-index: 1;
   top: 50%;
   left: 50%;
   margin-left: -160px;
@@ -68,7 +69,6 @@ body {
   height: 100px;
   padding: 20px;
   background: white;
-  box-shadow: 0 0 20px rgba(0,0,0,.125);
   opacity: 1;
   transition: opacity .2s;
 }
@@ -88,11 +88,43 @@ body {
 
 
 
+
+
+
+
+/* -----------------FINAL POP UP----------------- */
+
+.popup-outer {
+  width: 100%;
+  height: 13vh;
+  background: white;
+  display: none;
+  z-index: 1;
+  position: absolute;
+}
+
+.popup {
+	/*background-color: white;*/
+	color: black;
+	font-size: 2vw;
+	/*position: absolute;*/
+	display: none;
+	text-align: center;
+	z-index: 1;
+}
+
+
+
+
+
+
+
+
 /* -----------------THIS IS THE BOTTOM BAR----------------- */
 
 .color-input {
   position: absolute;
-  top: 83px;
+  /*top: 83px;*/
   left: 0;
   right: 0;
   opacity: 1;
@@ -103,21 +135,10 @@ body {
 
 .color-options {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
+  /*align-items: center;*/
+  /*width: 100%;*/
   justify-content: space-between;
 }
-
-.color-options-label {
-  padding: 20px;
-  font-size: 1.5vw;
-}
-
-/*.color-options-individual {
-  display: flex;
-  flex-direction: row;
-}*/
 
 .color-option {
   display: block;
@@ -127,7 +148,7 @@ body {
 }
 
 .color-option:hover {
-  opacity: .5;
+  opacity: .2;
 }
 
 .color-options-individual {
@@ -147,15 +168,19 @@ body {
 
 .message {
   position: fixed;
-  top: 150px;
   text-align: center;
-  color: white;
+  color: black;
+/*  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: black;*/
+  font-size: 20px;
+  letter-spacing: 1.5px;
   width: 100%;
   height: 100%;
 }
 
 .container img {
-  height: 70vh;
+	height: 70vh;
+	margin-top: 110px;
 }
 
 
@@ -167,52 +192,46 @@ body {
 
 /* -----------------COUNTDOWN TIMER----------------- */
 
-.countdown-label {
-  font: thin 15px Arial, sans-serif;
-  color: #65584c;
-  text-align: center;
-  text-transform: uppercase;
-  display: inline-block;
-  letter-spacing: 2px;
-  margin-top: 9px;
+.timer {
+  width: 20%;
+  height: 80%;
 }
 
-#countdown{
-  text-align: center;
+#tiles{
+  display: flex;
+  justify-content: space-between;
+  /*position: absolute;*/
+  /*display: block;*/
+  font-family: "Myriad Pro";
+  font-size: 4vw;
   margin: auto;
-  width: 100vw;
+  margin-top: 3%;
+  padding: 20px;
 }
 
-#countdown #tiles{
-  color: #fff;
-  position: relative;
-  z-index: 1;
-  display: inline-block;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  padding: 15px;
-  /*border-radius: 5px 5px 5px 5px;*/
-  font-size: 5vw;
-  font-weight: thin;
-  display: block;
-}
-
-.color-full {
-  background: gray;
+#countdown {
+  display: flex;
+  justify-content: space-between;
+  font-size: 4vw;  
 }
 .color-half {
-  background: gray;
-}
-.color-empty {
-  background: red;
+	color: black;
+
 }
 
-#countdown #tiles > span{
+.color-empty  {
+	color:red;
+
+}
+
+
+
+/*#countdown #tiles > span{
   width: 70px;
   max-width: 70px;
   padding: 18px 0;
   position: relative;
-}
+}*/
 
 /*#countdown .labels{
   width: 100%;

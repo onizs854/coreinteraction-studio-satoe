@@ -1,6 +1,7 @@
 // We declare the username variable up here so that we can
 // access it after we set it's value in the submit-button
 // click handler
+
 var username;
 
 // When the user clicks the submit button, we want to save the 
@@ -177,20 +178,30 @@ Chat.onUserCountChange(function (currentCount) {
 
 var minutes = $( '#set-time' ).val();
 
-var target_date = new Date().getTime() + ((minutes * 60 ) * 1000); // set the countdown date
-var time_limit = ((minutes * 60 ) * 1000);
+var target_date = new Date().getTime() + ((minutes * 10 ) * 9000); // set the countdown date
+var time_limit = ((minutes * 10 ) * 9000);
 //set actual timer
-setTimeout(
-  function() 
-  {
-    alert( 'done' );
-  }, time_limit );
+// setTimeout(
+//   function() 
+//   {
+//     $(".popup").show("");
+//   }, time_limit );
+
+$(function(){
+	$(".popup").delay(90000).fadeIn();
+});
+
+
+setTimeout(function(){
+	$(".popup-outer").delay(90000).fadeIn();
+});
+
 
 var days, hours, minutes, seconds; // variables for time units
 
 var countdown = document.getElementById("tiles"); // get tag element
 
-getCountdown();
+// getCountdown();
 
 setInterval(function () { getCountdown(); }, 1000);
 
@@ -224,7 +235,43 @@ if ( seconds_left >= 0 ) {
   // format countdown string + set tag value
   countdown.innerHTML = "<span>" + hours + ":</span><span>" + minutes + ":</span><span>" + seconds + "</span>"; 
   
+$('.museum').click(function () {
+	$("#color-option museum"). toggle();
 
+	event.stopPropagation();
+	return false;
+});
+
+$('.coffee').click(function () {
+	event.stopPropagation();
+});
+
+$('.park').click(function () {
+	event.stopPropagation();
+});
+
+$('.shop').click(function () {
+	event.stopPropagation();
+});
+
+$('.drinks').click(function () {
+	event.stopPropagation();
+});
+
+$('.homework').click(function () {
+	event.stopPropagation();
+});
+
+$('.food').click(function () {
+	event.stopPropagation();
+});
+
+$('.movie').click(function () {
+	return false;
+});
+
+$('.games').click(function () {
+});
   
 }
    
@@ -234,3 +281,14 @@ if ( seconds_left >= 0 ) {
 function pad(n) {
   return (n < 10 ? '0' : '') + n;
 }
+
+
+
+(function blink() { 
+    $('.popup').fadeOut(500).fadeIn(500, blink); 
+})();
+
+
+(function blink() { 
+    $('.color-half').fadeOut(500).fadeIn(500, blink); 
+})();
